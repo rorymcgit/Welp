@@ -1,4 +1,4 @@
-class Welp::RestaurantsController < WelpController
+class RestaurantsController < WelpController
   def new
   end
 
