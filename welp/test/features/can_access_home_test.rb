@@ -12,7 +12,4 @@ class CanAccessHomeTest < Capybara::Rails::TestCase
     click_link("Add New Restaurant")
     assert_current_path('/restaurants/new')
   end
-
-  # fill_in :name, with: "My Restaurant"
-  # fill_in :location, with: "Road Street"
 end

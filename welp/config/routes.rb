@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   root 'welp#index'
 
   get '/restaurants/new' => 'welp#restaurant_new'
-
+  post '/restaurants/new'
 
   # Example of regular route:
     # get 'products/:id' => 'catalog#view'
