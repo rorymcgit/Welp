@@ -1,8 +1,17 @@
 require 'test_helper'
 
 class RestaurantTest < ActiveSupport::TestCase
-  test "responds to name" do
-    p Restaurant.first
-    assert(Restaurant.first.name != nil)
+  test "has a name" do
+    assert(Restaurant.all[0].name == "Jasmine")
+  end
+
+  test "has a location" do
+    assert(Restaurant.all[0].location == "Brick lane")
+  end
+
+  test "adds a new restaurant to the database" do
+    count = Restaurant.all.length
+    Restaurant.create
+    assert(Restaurant.all.length == (count + 1))
   end
 end
