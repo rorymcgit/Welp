@@ -4,7 +4,7 @@ class CreateReviews < ActiveRecord::Migration
       t.integer :rating
 
       t.timestamps null: false
-      # t.belongs_to :restaurant
+      t.belongs_to :restaurant
     end
   end
 end
