@@ -14,4 +14,5 @@ class RestaurantTest < ActiveSupport::TestCase
     Restaurant.create
     assert(Restaurant.all.length == (count + 1))
   end
+
 end
