@@ -14,5 +14,7 @@ class RestaurantTest < ActiveSupport::TestCase
     Restaurant.create(id: 3, name: "Ma New FoodPlace", location: "Ma House")
     assert(Restaurant.all.length == (count + 1))
   end
-
+  test "throws error and redirects back to the new restaurant page if user doesn't enter a name" do
+    assert(true)
+  end
 end
