@@ -1,6 +1,11 @@
 require 'test_helper'
 
 class RestaurantTest < ActiveSupport::TestCase
+  
+  test "responds to name" do
+    assert(Restaurant.first.name != nil)
+  end
+
   test "has a name" do
     assert(Restaurant.all[0].name == "Jasmine")
   end
@@ -15,4 +20,12 @@ class RestaurantTest < ActiveSupport::TestCase
     assert(Restaurant.all.length == (count + 1))
   end
 
+  test "restaurants can be deleted" do
+    Restaurant.create(name: 'Testaurant')
+    restaurant = Restaurant.find_by(name: 'Testaurant')
+    assert(restaurant)
+    Restaurant.delete_restaurant(restaurant.id)
+    assert_not(Restaurant.find_by(name: 'Testaurant'))
+  end
+  
 end
