@@ -6,4 +6,5 @@ class Review < ActiveRecord::Base
               less_than_or_equal_to: 5
             }
   belongs_to :restaurant
+  belongs_to :user
 end

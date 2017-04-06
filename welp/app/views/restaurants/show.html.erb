@@ -21,7 +21,7 @@
 <ul>
   <%@restaurant.reviews.each do |review|%>
   <li>
-    <%= review.rating %>
+    <%= review.rating %> by: <%= review.user.email %>
   </li>
   <%end%>
 </ul>
