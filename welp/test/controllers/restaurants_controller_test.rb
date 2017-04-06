@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class RestaurantsControllerTest < ActionController::TestCase
+
   setup do
     @restaurant = restaurants(:one)
   end

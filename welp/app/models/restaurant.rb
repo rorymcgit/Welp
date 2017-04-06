@@ -4,6 +4,10 @@ class Restaurant < ActiveRecord::Base
 
   def self.get_average_rating(restaurant)
     rating = Review.where("restaurant_id = ?", restaurant.id).average(:rating)
-    rating = (rating*2).round / 2.0
+    if rating
+      return (rating*2).round / 2.0
+    else
+      return 'No Ratings Currently'
+    end
   end
 end
