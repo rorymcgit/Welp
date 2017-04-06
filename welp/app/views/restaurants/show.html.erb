@@ -30,7 +30,7 @@
   Leave a rating:
 </h2>
 
-<% form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
+<%= form_for([@restaurant, @restaurant.reviews.build]) do |f| %>
 <p>
   <%= f.label :rating %> (please write a number)
   <%= f.text_field :rating %>
