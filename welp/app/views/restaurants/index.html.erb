@@ -27,7 +27,24 @@
 </table>
 
 <br>
+<!-- <div class='container'>
+  <div id='map'></div>
+</div>
 
+<script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 51.509865,
+        "lng": -0.118092,
+        "infowindow": "hello!"
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+  });
+</script> -->
 <% if user_signed_in? %>
 <%= link_to 'New Restaurant', new_restaurant_path %>
 <% end %>
